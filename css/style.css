@@ -16,6 +16,10 @@ body {
 	padding-bottom:  100px;
 }
 
+a {
+	text-decoration: none;
+}
+
 /*Header*/
 #top-header {
 	position: relative;
@@ -40,7 +44,6 @@ body {
 
 img {
 	width:  100%;
-	max-width: 100%;
 	transition: all 0.5s ease;
 
 }
@@ -161,6 +164,12 @@ figure {
 	position: relative;
 }
 
+figure.fig-square {
+	height: 450px;
+	/* max-width:  460px;
+	margin: 0 auto; */
+}
+
 figure:before {
 	content:  '';
 	position: absolute;
@@ -179,6 +188,7 @@ figure:focus:before  {
 figure img {
 	-webkit-filter: grayscale(100%); 
     filter: grayscale(100%);
+    width:  120%;
 }
 
 figure:hover img,
@@ -294,7 +304,8 @@ textarea {
     outline:  0;
 }
 
-input[type="submit"]  {
+input[type="submit"],
+a.button {
     font-family: 'renner_mediummedium';
 	border: 2px solid #000;
     background: #000;
@@ -307,8 +318,17 @@ input[type="submit"]  {
     transition:  all 0.5s ease;
 }
 
+a.button {
+	display: block;
+	text-align: center;
+	margin-top:  20px;
+	line-height:  2.7;
+}
+
 input[type="submit"]:hover,
-input[type="submit"]:focus {
+input[type="submit"]:focus,
+a.button:hover,
+a.button:focus {
 	background: #fff;
 	color:  #000;
 }
@@ -357,10 +377,51 @@ footer span {
 }
 
 /*Responsive*/
+@media screen and (min-width: 1200px) {
+	figure {
+		height:  400px;
+	}
+
+	figure.fig-square {
+		height:  600px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.left-col,
 	.right-col {
 		width:  100%;
+	}
+
+	figure.fig-square {
+		height:  500px;
+	}
+
+	#top-header > div > span {
+		left:  0;
+		transform:  translateX(0);
+	}
+}
+
+@media screen and (max-width: 580px) {
+	img.logo {
+	    max-width: 230px;
+   	 	top: 10px;
+    	left: auto;
+    	right: -25px;
+	}
+
+	#top-header > div > span {
+	    max-width: 40%;
+    	font-size: 15px;
+	}
+
+	nav ul {
+		padding-left:  0;
+	}
+
+	nav ul li {
+		padding:  5px 2px;
 	}
 }
 
