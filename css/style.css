@@ -166,14 +166,14 @@ figure:before {
 	position: absolute;
 	width:  100%;
 	height:  100%;
-	background: rgba(218, 243, 16, 0.6);
-	transition: all 0.5s ease;
+	/*background: rgba(218, 243, 16, 0.6);*/
+	transition: all 0.3s ease;
 	z-index: 20;
 }
 
 figure:hover:before,
 figure:focus:before  {
-	background: rgba(218, 243, 16, 0.2);
+	background: rgba(218, 243, 16, 0.4);
 }
 
 figure img {
@@ -220,17 +220,48 @@ figure:focus figcaption  {
 }
 
 .page-heading {
+	position: relative;
     font-family: 'rennerbold', sans-serif;
 	text-align: center;
 	font-size: 32px;
 	text-transform: uppercase;
+	width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-heading:after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    top: 23px;
+    left: -15%;
+    background: rgba(218, 243, 16, 0.9);
+    z-index: -1;
+}
+
+/*Contact*/
+.contact-info {
+	width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info strong {
+	font-family: 'rennerbold', sans-serif;
+}
+
+a.link-inline {
+	text-decoration: none;
+	color:  #000;
 }
 
 /*Forms*/
 form {
     width: 325px;
     margin: 0 auto;
-	margin-top:  65px;
+	margin-top: 95px;
 }
 
 input[type="text"],
@@ -246,7 +277,7 @@ input[type="submit"] {
     color: #000;
     border: 0;
     border-bottom: 3px solid #000;
-    background: rgba(218, 243, 16, 0.8);
+    background: rgba(207, 208, 201, 0.34);
 }
 
 textarea {
@@ -259,16 +290,27 @@ textarea {
     padding-left: 18px;
     border: 0;
     border-bottom: 3px solid #000;
-    background: rgba(218, 243, 16, 0.8);
+    background: rgba(207, 208, 201, 0.34);
+    outline:  0;
 }
 
 input[type="submit"]  {
-    font-family: 'rennerbold', sans-serif;
+    font-family: 'renner_mediummedium';
 	border: 2px solid #000;
     background: #000;
     color: #fff;
+    height:  50px;
 	width:  320px;
 	text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition:  all 0.5s ease;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	background: #fff;
+	color:  #000;
 }
 
 input::-webkit-input-placeholder,
