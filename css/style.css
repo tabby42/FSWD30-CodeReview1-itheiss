@@ -33,7 +33,8 @@ a {
 #top-header > div > span {
 	position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     top: 0px;
     color: #fff;
     background: #000;
@@ -44,6 +45,7 @@ a {
 
 img {
 	width:  100%;
+	-webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 
 }
@@ -133,7 +135,10 @@ nav ul li a:after {
     background: #000;
     -webkit-transform: scale3d(0, 1, 1);
     transform: scale3d(0, 1, 1);
+    -webkit-transition: -webkit-transform 0.1s;
+    transition: -webkit-transform 0.1s;
     transition: transform 0.1s;
+    transition: transform 0.1s, -webkit-transform 0.1s;
 }
 
 nav ul li:hover a:after,
@@ -176,6 +181,7 @@ figure:before {
 	width:  100%;
 	height:  100%;
 	/*background: rgba(218, 243, 16, 0.6);*/
+	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 	z-index: 20;
 }
@@ -193,7 +199,8 @@ figure img {
 
 figure:hover img,
 figure:focus img  {
-	transform: scale(1.1, 1.1);
+	-webkit-transform: scale(1.1, 1.1);
+	        transform: scale(1.1, 1.1);
 	-webkit-filter: grayscale(10%); 
     filter: grayscale(10%);
 }
@@ -211,8 +218,10 @@ figcaption {
 	left: 30px;
 	max-width: 70%;
 	padding: 10px;
+	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
-	transform: translate3d(0, -20%, 0);
+	-webkit-transform: translate3d(0, -20%, 0);
+	        transform: translate3d(0, -20%, 0);
 	z-index:  20;
     word-wrap:  break-word;
 }
@@ -224,7 +233,8 @@ figure:focus figcaption  {
 	font-size:  20px;
 	top: 15px;
 	left:  15px;
-	transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+	        transform: translate3d(0, 0, 0);
 	text-align: left;
 	max-width:  60%;
 }
@@ -315,6 +325,7 @@ a.button {
 	text-transform: uppercase;
     font-size: 18px;
     letter-spacing: 1px;
+    -webkit-transition:  all 0.5s ease;
     transition:  all 0.5s ease;
 }
 
@@ -399,7 +410,8 @@ footer span {
 
 	#top-header > div > span {
 		left:  0;
-		transform:  translateX(0);
+		-webkit-transform:  translateX(0);
+		        transform:  translateX(0);
 	}
 }
 
